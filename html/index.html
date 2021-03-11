@@ -1,5 +1,51 @@
-<Doctype html>
-<html>
+<!DOCtype html>
+<html lang="fr">
     <head>
-        <meta charset="utf-8"/>
+        <!--En tete de la page-->
+        <title>ohmyfood, commande de menu à l'avance</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../public/css/style.css"/>
+        <script src="https://kit.fontawesome.com/ad04b664a5.js" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
+    <body>
+        <div class=corps>
+        <header>
+        <div><img src="../images/logo/ohmyfood@2x.svg" alt="logo_ohmyfood"></div>
+        <p><form method="post">
+            <p><i class="fas fa-map-marker-alt"></i><label for="nomdeville"></label><input type="text" value="Paris, Belleville"name="localiserville" id="nomdeville"/></p>
+        </form></p>
+        <div class="conteneurbanniere">
+            <h2>Réservez le menu qui vous convient </h1>
+            <h3>Découvrez des restaurants d'exception, selectionnés par nos soins.</h3>
+            <p>Explorer nos restaurants</p>
+        </div>
+        </header>
+        <nav>
+            <h2>Fonctionnement</h2>
+            <div class="blockfonctionnement">
+                <div class="blockfonctionnement__btn"><p class="btn__chiffre">1</p><p>Choisissez un restaurant</p></div>
+                <div class="blockfonctionnement__btn"><p class="btn__chiffre">2</p><p>Composez votre menu</p></div>
+                <div class="blockfonctionnement__btn"><p class="btn__chiffre">3</p><p>Dégustez au restaurant</p></div>
+            </div>
+        </nav>
+        <section>
+            <h2>Restaurants</h2>
+            <div class="blockrestaurant">
+
+                <div class="blockrestaurant__btn"><p class="btn__image"><img src="../images/restaurants/lapalettedugout.jpg" alt="restaurant_la_palette_à_du_gout"/><span>Nouveau</span></p>
+                    <p class="btn__nomhotel">La palette à du goût</p><p class="btn__lieu">Ménilmontant</p></div>
+
+                <div class="blockrestaurant__btn"><p class="btn__image"><img src="../images/restaurants/lanoteenchantee.jpg" alt="restaurant_la_note_enchantée"/><span>Nouveau</span></p>
+                    <p class="btn__nomhotel">La note enchantée</p><p class="btn__lieu">Charonne</p></div>
+                
+                <div class="blockrestaurant__btn"><p class="btn__image"><img src="../images/bannieres restaurants/alafrancaise.jpg" alt="restaurant_à_la_francaise"/></p>
+                    <p class="btn__nomhotel">A la française</p><p class="btn__lieu">Cité Rouge</p></div>
+                
+                    
+            </div>
+        </section>
+
+        </div>
+        </body>
+        </html>
