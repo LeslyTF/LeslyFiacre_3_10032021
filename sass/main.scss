@@ -1,0 +1,24 @@
+body{
+    margin:0px;
+    padding:0px;
+}
+.blocklogo{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:50px;
+    &__logo{
+        width: 40%;   
+    }
+}
+.blockformulaire{
+    background-color:#eaeaea;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    &__champ{
+        background-color: #eaeaea;
+        border:none;
+    }
+}
