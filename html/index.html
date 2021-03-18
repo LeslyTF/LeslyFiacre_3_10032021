@@ -14,40 +14,56 @@
         <header>
         <div class="blocklogo"><img class="blocklogo__logo"src="../images/logo/ohmyfood@2x.svg" alt="logo_ohmyfood"></div>
         <div class="blockformulaire"><p><form method="post">
-            <p><i class="fas fa-map-marker-alt"></i><label for="nomdeville"></label><input class="blockformulaire__champ"type="text" value="Paris, Belleville"name="localiserville" id="nomdeville"/></p>
+            <p class="blockformulaire__btn"><i class="fas fa-map-marker-alt localiser"></i><label for="nomdeville"></label><input class="blockformulaire__champ"type="text" value="Paris, Belleville"name="localiserville" id="nomdeville"/></p>
         </form></p>
         </div>
         <div class="conteneurbanniere">
-            <h2>Réservez le menu qui vous convient </h1>
-            <h3>Découvrez des restaurants d'exception, selectionnés par nos soins.</h3>
-            <p>Explorer nos restaurants</p>
+            <h2 class="conteneurbanniere__titre">Réservez le menu qui vous convient </h1>
+            <h3 class="conteneurbanniere__texte">Découvrez des restaurants d'exception, selectionnés par nos soins.</h3>
+            <p class="conteneurbanniere__btn">Explorer nos restaurants</p>
         </div>
         </header>
         <!--partie nav-->
+        
         <nav>
-            <h2>Fonctionnement</h2>
-            <ol class="blockfonctionnement"><p>Fonctionnement</p>
-                <li class="blockfonctionnement__btn"><p>Choisissez un restaurant</p></li>
-                <li class="blockfonctionnement__btn"><p>Composez votre menu</p></li>
-                <li class="blockfonctionnement__btn"><p>Dégustez au restaurant</p></li>
-            </ol>
+            <h2 class="titreaccueil">Fonctionnement</h2>
+            <div class="blockfonctionnement">
+                <div class="btnfonctionnement">
+                <p class="btnfonctionnement__num">1</p><p class="btnfonctionnement__texte"><i class="fas fa-mobile-alt texte__logo"></i>Choisissez un restaurant</p>
+                </div>
+                <div class="btnfonctionnement">
+                <p class="btnfonctionnement__num">2</p><p class="btnfonctionnement__texte"><i class="fas fa-list-ul texte__logo"></i>Composez votre menu</p>
+                </div>
+                <div class="btnfonctionnement">
+                <p class="btnfonctionnement__num">3</p><p class="btnfonctionnement__texte"><i class="fas fa-store texte__logo"></i>Dégustez au restaurant</p>
+                </div>
+            </div>
         </nav>
         <!--partie restaurants-->
-        <section>
-            <h2>Restaurants</h2>
+        <section class="sectionrestaurant">
+            <h2 class="titreaccueil accueilrestaurant">Restaurants</h2>
+            
             <div class="blockrestaurant">
 
-                <div class="blockrestaurant__btn"><p class="btn__image"><img src="../images/restaurants/lapalettedugout.jpg" alt="restaurant_la_palette_à_du_gout"/><span>Nouveau</span></p>
-                    <p class="btn__nomhotel">La palette à du goût</p><p class="btn__lieu">Ménilmontant</p></div>
+                <div class="btnrestaurant">
+                    <img class="btnrestaurant__img" src="../images/restaurants/lapalettedugout.jpg" alt="restaurant_la_palette_à_du_gout"/>
+                    <p class="btnrestaurant__nomhotel">La palette à du goût</p><p class="btnrestaurant__lieu">Ménilmontant</p><i class="far fa-heart btnrestaurant__coeur"></i><span class="btnrestaurant__nouveau">Nouveau</span>
+                </div>
 
-                <div class="blockrestaurant__btn"><p class="btn__image"><img src="../images/restaurants/lanoteenchantee.jpg" alt="restaurant_la_note_enchantée"/><span>Nouveau</span></p>
-                    <p class="btn__nomhotel">La note enchantée</p><p class="btn__lieu">Charonne</p></div>
-                
-                <div class="blockrestaurant__btn"><p class="btn__image"><img src="../images/restaurants/alafrancaise.jpg" alt="restaurant_à_la_francaise"/></p>
-                    <p class="btn__nomhotel">A la française</p><p class="btn__lieu">Cité Rouge</p></div>
+                <div class="btnrestaurant">
+                    <img class="btnrestaurant__img" src="../images/restaurants/lanoteenchantee.jpg" alt="restaurant_la_note_enchantée"/>
+                    <p class="btnrestaurant__nomhotel">La note enchantée</p><p class="btnrestaurant__lieu">Charonne</p><i class="far fa-heart btnrestaurant__coeur"></i><span class="btnrestaurant__nouveau">Nouveau</span>
+                </div>
 
-                <div class="blockrestaurant__btn"><p class="btn__image"><img src="../images/restaurants/ledelicedessens.jpg" alt="restaurant_le_délice_des_sens"/></p>
-                    <p class="btn__nomhotel">Le délice des sens</p><p class="btn__lieu">Folie-Méricourt</p></div>    
+                <div class="btnrestaurant">
+                    <img class="btnrestaurant__img"src="../images/restaurants/alafrancaise.jpg" alt="restaurant_à_la_francaise"/>
+                    <p class="btnrestaurant__nomhotel">À la française</p><p class="btnrestaurant__lieu">Cité Rouge</p><i class="far fa-heart btnrestaurant__coeur"></i>
+                </div>
+
+                <div class="btnrestaurant">
+                    <img class="btnrestaurant__img" src="../images/restaurants/ledelicedessens.jpg" alt="restaurant_le_délice_des_sens"/>
+                    <p class="btnrestaurant__nomhotel">Le délice des sens</p><p class="btnrestaurant__lieu">Folie-Méricourt</p><i class="far fa-heart btnrestaurant__coeur"></i>
+                </div>    
             </div>
         </section>
         <!--partie footer-->
