@@ -19,6 +19,13 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face{
+    font-family: 'shrikhand';
+    src: url('../../fonts/shrikhandregular.woff2') format('woff2'),
+         url('../../fonts/shrikhandregular.woff')  format('woff');    
+    font-weight: normal;
+    font-style: normal;
+}
 
 
 $colorprimary:#9356DC;
@@ -184,7 +191,6 @@ body{
     display:flex;
     flex-direction: column;
     align-items: center;
-    border:1px solid red;
 }
 
 .btnrestaurant{
@@ -236,6 +242,35 @@ box-shadow: 3px 2px 6px $colorshaow  ;
 footer{
     background-color:#353535;
     color: white;
-    list-style: none;
+    height: 165px;
 }
+.conteneurfooter{
+    padding-left: 15px;
+    margin:0px;
+}
+.footertitre{
+    font-family: 'shrikhand';
+    margin:0px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+.li--gras{
+    font-family:'robotobold';
+    list-style-type: none;
+    margin-top: 4px;
+    margin-right: 5px;
+}
+.footermains{
+    font-size:x-small;
+    margin-right:5px;
+}
+.footercouvert{
+    margin-right: 7px;
+    font-size: small;
+}
+.liregular{
+    list-style-type: none;
+    margin-top: 2px;
+}
+
 
