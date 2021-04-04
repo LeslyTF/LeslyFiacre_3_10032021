@@ -4,21 +4,25 @@
         <!--En tete de la page-->
         <title>ohmyfood, commande de menu à l'avance</title>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="../public/css/style.css"/>
+        <link rel="stylesheet" href="../public/css/stylerestaurant.css"/>
         <script src="https://kit.fontawesome.com/ad04b664a5.js" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>
         <div class=corps>
+
         <!--partie header-->
-        <header>
-            <div><i class="fas fa-arrow-left"></i><img src="../images/logo/ohmyfood@2x.svg" alt="logo_ohmyfood"/></div>
-            <div><img src="../images/bannieres restaurants/alafrancaise.jpg"/></div>
+        <header class="pageheader">
+            <div class="pageheader__blocklogo"><i class="fas fa-arrow-left pageheaderfleche"></i><img class="pagelogo" src="../images/logo/ohmyfood@2x.svg" alt="logo_ohmyfood"/></div>
         </header>
+        <div class="pageblockimg"><img src="../images/bannieres restaurants/alafrancaise.jpg"/></div>
+
         <!--partie menu restaurant-->
         <section>
             <h2>À la française <i class="fas fa-heart"></i></h2>
+
             <!--partie entrées-->
+
             <article class="blockmenu">
                 <p class="blockmenu__titre">ENTRÉES</p>
                 <div class="blockmenu__btn"><p class="btn__nom">Tartare de poulpe acidulé</p>
@@ -33,6 +37,7 @@
                     <p class="btn__description">Revisitée<span class="btn__prix">20€</span></p>
                 </div><span class="check"><i class="fas fa-check-circle"></i></span>
             <!--partie plats-->
+
                 <p class="blockmenu__titre">PLATS</p>
                 <div class="blockmenu__btn"><p class="btn__nom">Coquilles Saint-Jacques</p>
                      <p class="btn__description">Accompagnées d'une purée de panais<span class="btn__prix">40€</span></p>
@@ -63,11 +68,12 @@
             </article>
         </section>
         <footer>
-            <ul class="footer"><p>ohmyfood</p>
-                <li class="btn--gras"><i class="fas fa-utensils footer--icone"></i>Proposer un restaurant</li>
-                <li class="btn--gras"><i class="fas fa-hands-helping footer--icone"></i>Devenir partenaire</li>
-                <li class="footer__btn">Mentions légales</li>
-                <li class="footer__btn">Contact</li>
+            <ul class="conteneurfooter">
+                <h3 class="footertitre">ohmyfood</h3>
+                <li class="li--gras"><i class="fas fa-utensils footercouvert"></i>Proposer un restaurant</li>
+                <li class="li--gras"><i class="fas fa-hands-helping footermains"></i>Devenir partenaire</li>
+                <li class="liregular">Mentions légales</li>
+                <li class="liregular">Contact</li>
             </ul>
         </footer>
         </div>

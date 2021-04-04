@@ -1,0 +1,266 @@
+@font-face{
+    font-family: 'robotoregular';
+    src: url('../../fonts/robotoregular.woff2') format('woff2'),
+         url('../../fonts/robotoregular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'robotobold';
+    src: url('../../fonts/robotobold.woff2') format('woff2'),
+         url('../../fonts/robotobold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'robotothin';
+    src: url('../../fonts/robotothin.woff2') format('woff2'),
+         url('../../fonts/robotothin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'shrikhand';
+    src: url('../../fonts/shrikhandregular.woff2') format('woff2'),
+         url('../../fonts/shrikhandregular.woff')  format('woff');    
+    font-weight: normal;
+    font-style: normal;
+}
+$colorprimary:#9356DC;
+$colorsecondary:#FF79DA;
+$colortertiary:#99E2D0;
+$fondsecondary:#f6f6f6;
+$colorshaow:rgb(179, 178, 178);
+
+@mixin btn_primary {
+    padding:10px 15px 10px 15px;
+        color:white;
+        border-radius: 25px;
+        text-align: center;
+        box-shadow: 3px 3px 10px grey;
+        margin-top: 5px;
+        background-image: linear-gradient(175deg,$colorsecondary, $colorprimary);   
+}
+@mixin btn_commander {
+    padding:10px 15px 10px 15px;
+        color:white;
+        border-radius: 25px;
+        text-align: center;
+        box-shadow: 3px 3px 10px grey;
+        margin: 30px 0px 60px 0px;
+        background-image: linear-gradient(175deg,$colorsecondary, $colorprimary); 
+        width:35%;  
+}
+
+
+@mixin titreaccueil{
+    font-family: 'robotobold';
+    font-size:1.3rem;
+    padding-top: 15px;
+}
+
+@mixin titremenustyle{
+    font-family:'robotothin';
+    border-bottom:3px solid $colortertiary;
+    width:40px;
+}
+
+
+
+/* debut projet*/
+
+body{
+    font-family:'robotoregular';
+    padding:0px;
+}
+.conteneurheader{
+    border:1px solid red;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    &__fleche{
+        border:1px solid green;
+        position:absolute;
+        top:20px;
+        left:20px;
+        font-size:large;
+    }
+    &__logo{
+        border:1px solid purple;
+        width:100%;
+        margin-top:5px;
+    }
+}
+/* block baniere*/
+.pageblockimg{
+    border:1px solid yellow;
+    padding:0px;
+    z-index:1;
+    .imgbanniere{
+        border:1px solid brown;
+        object-fit: cover;
+        width:100%;
+        z-index:2;
+
+    }
+}
+.pagemenu{
+    border:1px solid green;
+    margin-top:-55px;
+    z-index:3;
+    position: relative;
+    background-color: white;
+    border-radius: 30px 30px 0px 0px;
+    width:100%;
+    padding-top: 15px;
+    background-color: $fondsecondary;
+}
+
+.pagehaut{
+    display: flex;
+    border: 1px solid grey;
+    justify-content: space-between;
+    padding:0px 15px 0px 10px;
+    margin-top: 5px;
+    &__titre{
+        margin:0px;
+        font-family:'shrikhand';
+    }
+    &__coeur{
+    border:1px solid rgb(37, 37, 37); 
+    vertical-align: bottom;
+    padding-top: 7px;
+    font-size: large;
+    color:rgb(59, 59, 59);
+    }
+}
+
+.menutitre{
+    @include titremenustyle;
+}
+.conteneurbtn{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.btnmenu{
+    background-color: white;
+    width:150px;
+    display: flex;
+    justify-content: space-between;
+    width:95%;
+    box-shadow: 3px 3px 15px rgb(212, 211, 211);
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    &__nom{   
+        margin:5px 10px 5px 5px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 150px;
+        width:90%;
+        overflow: hidden;
+        transform-origin: left;
+        transition: width 500ms;
+        padding: 5px 5px 0px 5PX; 
+    }
+    &__description{
+            font-family: 'robotothin';
+            text-overflow: ellipsis;
+         
+        }
+    &__prix{
+            font-style: 'robotobold'; 
+            display: inline-block; 
+            padding-top: 28px;
+            transition:transform 500ms 300ms ease-out;
+            
+    }
+    &__anim{
+        width:15%;
+        background-color: $colortertiary;
+        height:62px;
+        overflow: hidden;
+        display: inline-block;  
+        transition: transform 1000ms;
+        transform-origin: right;
+        border-radius: 0px 10px 10px 0px;
+        object-fit: cover;
+        transform:translateX(100%);
+        .btnmenu__check{
+            color:white;   
+            font-size: large;
+            vertical-align: middle;
+            position: relative;
+            top:17px;
+            left: 26%;
+            display: inline-block;
+            margin: auto;
+            width: 18px;
+            transform: rotate(-360deg); 
+            transition:transform 650ms 300ms; 
+            
+        }
+    }
+        
+}
+.btnmenu{
+    &:hover .btnmenu__anim{
+        transform:translateX(0);
+        display:active;
+    }
+    &:hover .btnmenu__prix{
+        transform:translateX(-19%)
+    }
+    &:hover .btnmenu__nom{
+        width:70%;
+    }
+    &:hover .btnmenu__check{
+        transform:rotate(0deg);
+    }
+}
+.blockcommander{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btncommander{
+    @include btn_commander;
+}
+/*partie footer*/
+footer{
+    background-color:#353535;
+    color: white;
+    height: 165px;
+}
+.conteneurfooter{
+    padding-left: 15px;
+    margin:0px;
+}
+.footertitre{
+    font-family: 'shrikhand';
+    margin:0px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    list-style-type:none;
+}
+.li--gras{
+    font-family:'robotobold';
+    list-style-type: none;
+    margin-top: 4px;
+    margin-right: 5px;
+}
+.footermains{
+    font-size:x-small;
+    margin-right:5px;
+}
+.footercouvert{
+    margin-right: 7px;
+    font-size: small;
+}
+.liregular{
+    list-style-type: none;
+    margin-top: 2px;
+}
