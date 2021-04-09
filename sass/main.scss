@@ -41,20 +41,142 @@ $colorshaow:rgb(179, 178, 178);
         text-align: center;
         box-shadow: 3px 3px 10px grey;
         margin-top: 5px;
-        background-image: linear-gradient(175deg,$colorsecondary, $colorprimary);   
+        background-image: linear-gradient(175deg,$colorsecondary, $colorprimary);
+        &:hover{
+            filter:brightness(110%);
+            box-shadow:5px 5px 10px rgb(107, 106, 106);
+        }   
 }
 @mixin titreaccueil{
     font-family: 'robotobold';
     font-size:1.3rem;
     padding-top: 15px;
 }
+h1 {
+    font-weight: 100;
+    color:black;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    background: white;
+    text-align: center;
+    font-family:'shrikhand', sans-serif;
+    z-index: -1;
+    position: absolute;
+  }
+  
+h1 span {
+    position: relative;
+    top: 0.63em;  
+    display: inline-block;
+    text-transform: lowercase;  
+    opacity: 0;
+    transform: rotateX(-90deg);
+    font-size: 3em;
+  }
+  
+  .let1 {
+    animation: drop 2.2s ease-in-out;
+    animation-delay: 1.2s;
+  }
+  
+  .let2 {
+    animation: drop 2.2s ease-in-out;
+    animation-delay: 1.3s;
+  }
+  
+  .let3 {
+    animation: drop 2.2s ease-in-out;
+    animation-delay: 1.4s;
+  }
+  
+  .let4 {
+    animation: drop 2.2s ease-in-out;
+    animation-delay: 1.5s;
+  
+  }
+  
+  .let5 {
+    animation: drop 2.2s ease-in-out;
+    animation-delay: 1.6s;
+  }
+  
+  .let6 {
+    animation: drop 2.2s ease-in-out;
+    animation-delay: 1.7s;
+  }
+  
+  .let7 {
+    animation: drop 2.2s ease-in-out;
+    animation-delay: 1.8s;
+  }
+  .let8 {
+    animation: drop 2.2s ease-in-out;
+    animation-delay: 1.9s;
+  }
+  
+  
+  @keyframes drop {
+      10% {
+          opacity: 0.5;
+      }
+      20% {
+          opacity: 1;
+          top: 3.78em;
+          transform: rotateX(-360deg);
+      }
+      80% {
+          opacity: 1;
+          top: 3.78em;
+          transform: rotateX(-360deg);
+      }
+      90% {
+          opacity: 0.5;
+      }
+      100% {
+          opacity: 0;
+          top: 6.94em
+      }
+  }
+  @keyframes opaque{
+      0%{
+          opacity:0;
+      }
+      
+      100%{
+          opacity:0;
+      }
+  }
+  @keyframes fondu{
+      0%{
+          opacity:0;
+      }
+      50%{
+          opacity:0.5;
+      }
+      100%{
+          opacity:1;
+      }
+  }
 
 body{
     margin:0px;
     padding:0px;
     font-family: italic,'robotoregular', serif, sans-serif;
+    height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  background: white;
+  
 
 }
+.corps{
+    animation:opaque 4.5s, fondu 2S 4.3s;
+} 
 .blocklogo{
     width:100%;
     display:flex;
@@ -180,6 +302,7 @@ body{
     padding-top: 2px;
     z-index: 3;
 }
+
 /*partie restaurant*/
 
 .sectionrestaurant{
@@ -194,7 +317,6 @@ body{
     align-items: center;
     padding-bottom: 30px;
 }
-
 .btnrestaurant{
 display:flex;
 flex-direction: column; 
