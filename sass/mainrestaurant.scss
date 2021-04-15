@@ -32,6 +32,7 @@ $colorsecondary:#FF79DA;
 $colortertiary:#99E2D0;
 $fondsecondary:#f6f6f6;
 $colorshaow:rgb(179, 178, 178);
+$coeurfull:#D86CDB;
 
 /* MIXINS */
 @mixin btn_primary {
@@ -129,7 +130,7 @@ body{
 .pagehaut{
     display: flex;
     justify-content: space-between;
-    margin: 5px 10% 0px 3%;
+    margin: 5px 6% 0px 3%;
     &__titre{
         margin:0px;
         font-family:'shrikhand';
@@ -137,10 +138,32 @@ body{
     &__coeur{
     vertical-align: bottom;
     padding-top: 7px;
-    font-size: large;
+    font-size: x-large;
     color:rgb(59, 59, 59);
+    transition: opacity 350ms;
+    }
+    &__coeurfull{
+    vertical-align: bottom;
+    padding-top: 7px;
+    font-size: x-large;
+    color:$coeurfull;
+    position:relative;
+    right:50%;
+    transform: scale(0);
+    transition: transform 350ms ease-out;
+    }
+
+}
+/*animation coeur*/
+.pagehaut__blockcoeur{
+    &:hover .pagehaut__coeur{
+        opacity: 0;
+    }
+    &:hover .pagehaut__coeurfull{
+        transform:scale(1)
     }
 }
+
 .menutitre{
     @include titremenustyle;
 }
@@ -246,7 +269,8 @@ body{
 .btncommander{
     @include btn_commander;
     &:hover{
-       background:linear-gradient(ellipse, darken($colorprimary,10) 50%,darken($colorsecondary,2)30%); 
+    filter:brightness(110%);
+    box-shadow:5px 5px 10px rgb(107, 106, 106);
     }
 }
 /*partie footer*/
@@ -262,7 +286,7 @@ footer{
 .footertitre{
     font-family: 'shrikhand';
     margin:0px;
-    padding-top: 10px;
+    padding-top: 15px;
     padding-bottom: 5px;
     list-style-type:none;
 }
