@@ -53,7 +53,6 @@ $coeurfull:#D86CDB;
     font-size:1.3rem;
     padding-top: 15px;
 }
-/*
 h1 {
     font-weight: 100;
     color:black;
@@ -162,7 +161,6 @@ h1 span {
           opacity:1;
       }
   }
-  */
 
 body{
     margin:0px;
@@ -210,6 +208,7 @@ body{
         padding-left:10px;
         color: rgb(88, 87, 87);
         border: #eaeaea;
+        font-family: 'robotobold';
     }
 }
 .localiser{
@@ -320,6 +319,7 @@ body{
     align-items: center;
     padding-bottom: 30px;
 }
+/*boutons restaurants*/
 .btnrestaurant{
 display:flex;
 flex-direction: column; 
@@ -351,13 +351,14 @@ box-shadow: 3px 2px 6px $colorshaow  ;
     &__nomhotel{
         margin:5px 0px 0px 5px;
         font-family: 'robotobold';
+        padding: 1% 2% 0% 3%;
     }
     &__lieu{
         margin: 0px 0px 0px 5px;
         font-family: 'robotothin';
         display:flex;
         justify-content: space-between;
-        padding-right: 2%;
+        padding: 0% 2% 0% 3%;
         
     }
     &__coeur{
@@ -370,33 +371,34 @@ box-shadow: 3px 2px 6px $colorshaow  ;
         opacity:0;
         }
     }
-    &__coeurfull,{
+    &__coeurfull{
         color:$coeurfull;
         font-size:1.3rem;
         padding-left: -100px;
-        display: inline-flex;
         position:relative;
         right:50%;
-        display: inline-block;
+        display:inline-block;
         transform: scale(0);
         transition:transform 200ms ease-out;
-        
+        &:hover{
+            transform:scale(1);
+        }  
     }
 } 
-
+/*partie contenant animation des coeurs autre partie coeur violet dans coeurfull*/
 .blockcoeur{
     position: relative;  
     bottom:10px;
     display: inline-block;
-    .btncoeurvide,{
+    .btncoeurvide{
         display: inline-block;
         z-index:1;
-        transition: opacity 200ms; 
+        transition: opacity 200ms;
     }
     .btnrestaurant__coeurop{
         font-size: 1.3rem;
         color:rgb(141, 141, 141);
-        display:inline-block
+        display:inline-block;
     }
 }
 /*animation coeur*/
@@ -409,15 +411,6 @@ box-shadow: 3px 2px 6px $colorshaow  ;
     }
 }
 
-
-/*
-.btnrestaurant__coeurop{
-    display: inline;
-}
-.btnrestaurant__coeurfull{
-    display: inline;
-}
-*/
 /*partie footer*/
 footer{
     background-color:#353535;
@@ -431,7 +424,7 @@ footer{
 .footertitre{
     font-family: 'shrikhand';
     margin:0px;
-    padding-top: 10px;
+    padding-top: 15px;
     padding-bottom: 5px;
 }
 .li--gras{
@@ -452,33 +445,5 @@ footer{
     list-style-type: none;
     margin-top: 2px;
 }
-
-
-/* partie restaurant */
-
-.pageheader{
-    display:flex;
-    justify-content: center;
-    flex-direction: row;
-    &__blocklogo{
-        border:1px solid red;
-        .pageheaderfleche{
-            border:1px solid green;
-            display: block;
-            width: 15px;
-        }
-        .pagelogo{
-            border:1px solid yellow;
-            width:70%;
-            padding:10px;
-            display: block;
-        }
-    }
-}
-    .pageblockimg{
-        border:1px solid purple;
-        height:100px;
-    }
-
 
 
