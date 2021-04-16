@@ -90,6 +90,7 @@ body{
     font-family:'robotoregular';
     padding:0px;
     margin: 0px;
+    min-width:347px;
 }
 .conteneurheader{
     display:flex;
@@ -308,3 +309,20 @@ footer{
     list-style-type: none;
     margin-top: 2px;
 }
+/* partie responsive tablette*/
+@media screen and (min-width:415px) and (max-width:1220px){
+    .blockmenu{
+        justify-content: center;
+    }
+    .menutitre{
+        text-align: center;
+        margin-left:19%;
+    }
+    .conteneurbtn{
+        display: flex;    
+    }
+    .btnmenu{
+        width:65%;
+    }
+}
+
