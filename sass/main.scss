@@ -26,8 +26,8 @@
     font-weight: normal;
     font-style: normal;
 }
-
-
+$fondsecondarydeux:#f7f1f1;
+$colorprimarydeux:#8b51d3;
 $colorprimary:#9356DC;
 $colorsecondary:#FF79DA;
 $colortertiary:#99E2D0;
@@ -111,8 +111,9 @@ body{
     min-width: 320px;
     max-width: 1230px;
     margin:auto;
-  
-
+}
+a:link{
+    text-decoration: none;
 }
 h1 {
     font-weight: 100;
@@ -273,7 +274,7 @@ h1 span {
     padding-bottom: 15px;
     &__num{
         width:20px;
-        border: 1px solid $colorprimary;
+        border: 1px solid #8b51d3;
         background-color: $colorprimary;
         color:white;
         text-align: center;
@@ -285,7 +286,7 @@ h1 span {
     }
     &__texte{
        width: 100%;
-       border: 1px solid $fondsecondary;
+       border: 1px solid #f7f1f1;
        background-color: $fondsecondary;
        padding-top: 18px;
        padding-bottom: 18px;
@@ -359,6 +360,7 @@ box-shadow: 3px 2px 6px $colorshaow  ;
         margin:5px 0px 0px 5px;
         font-family: 'robotobold';
         padding: 1% 2% 0% 3%;
+        color:black;
     }
     &__lieu{
         margin: 0px 0px 0px 5px;
@@ -366,6 +368,7 @@ box-shadow: 3px 2px 6px $colorshaow  ;
         display:flex;
         justify-content: space-between;
         padding: 0% 2% 0% 3%;
+        color: black;
         
     }
     &__coeur{

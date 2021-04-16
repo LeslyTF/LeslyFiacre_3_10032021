@@ -90,7 +90,11 @@ body{
     font-family:'robotoregular';
     padding:0px;
     margin: 0px;
-    min-width:347px;
+    min-width:320px;
+    max-width: 1920px;
+}
+a{
+    text-decoration: none;
 }
 .conteneurheader{
     display:flex;
@@ -101,6 +105,7 @@ body{
         position: absolute;
         left:7%;
         top:10px;
+        color: black;
     }
     &__logo{
         font-family: 'shrikhand';
@@ -113,9 +118,11 @@ body{
     padding:0px;
     z-index:1;
     .imgbanniere{
-        object-fit: cover;
+        
         width:100%;
         z-index:2;
+        height:20em;
+        object-position: center;
     }
 }
 .pagemenu{
@@ -174,9 +181,6 @@ body{
     flex-direction: column;
     align-items: center;  
 }
-.blockmenu{
-
-}
 .btnmenu{
     background-color: white;
     width:150px;
@@ -206,7 +210,6 @@ body{
          
         }
     &__prix{
-            font-style: 'robotobold'; 
             display: inline-block; 
             padding-top: 28px;
             transform:translateX(0%);
@@ -241,7 +244,7 @@ body{
 .btnmenu{
     &:hover .btnmenu__anim{
         transform:translateX(0);
-        display:active;
+
     }
     &:hover .btnmenu__prix{
         transform:translateX(-10%);
@@ -310,16 +313,16 @@ footer{
     margin-top: 2px;
 }
 /* partie responsive tablette*/
-@media screen and (min-width:415px) and (max-width:1220px){
+@media screen and (min-width:415px) and (max-width:3000px){
     .blockmenu{
         justify-content: center;
     }
     .menutitre{
         text-align: center;
-        margin-left:19%;
+        margin-left:18%;
     }
     .conteneurbtn{
-        display: flex;    
+        display: flex;  
     }
     .btnmenu{
         width:65%;
