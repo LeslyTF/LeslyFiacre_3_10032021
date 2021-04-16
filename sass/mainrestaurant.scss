@@ -91,10 +91,12 @@ body{
     padding:0px;
     margin: 0px;
     min-width:320px;
-    max-width: 1920px;
+    max-width: 1600px;
+    margin:auto;
 }
 a{
     text-decoration: none;
+    color: white;
 }
 .conteneurheader{
     display:flex;
@@ -103,7 +105,7 @@ a{
     &__fleche{
         font-size:large;
         position: absolute;
-        left:7%;
+        left:10%;
         top:10px;
         color: black;
     }
@@ -118,11 +120,13 @@ a{
     padding:0px;
     z-index:1;
     .imgbanniere{
-        
+       max-width: 1230px;
+        margin: auto;
         width:100%;
         z-index:2;
         height:20em;
         object-position: center;
+        display: block;
     }
 }
 .pagemenu{
@@ -257,14 +261,18 @@ a{
     }
 }
 .btnmenu--1{
-    animation:anim-plat 600ms 200ms both cubic-bezier(.08,.96,.14,.96);
+    animation:anim-plat 800ms 200ms both cubic-bezier(.08,.96,.14,.96);
 }
 .btnmenu--2{
-    animation: anim-plat 600ms 400ms both cubic-bezier(.08,.96,.14,.96);
+    animation: anim-plat 800ms 400ms both cubic-bezier(.08,.96,.14,.96);
 }
 .btnmenu--3{
-    animation: anim-plat 600ms 600ms both cubic-bezier(.08,.96,.14,.96);
+    animation: anim-plat 800ms 600ms both cubic-bezier(.08,.96,.14,.96);
 }
+.btnmenu--4{
+    animation: anim-plat 800ms 800ms both cubic-bezier(.08,.96,.14,.96);    
+}
+
 .blockcommander{
     display: flex;
     align-items: center;
@@ -293,6 +301,7 @@ footer{
     padding-top: 15px;
     padding-bottom: 5px;
     list-style-type:none;
+    font-size: large;
 }
 .li--gras{
     font-family:'robotobold';
