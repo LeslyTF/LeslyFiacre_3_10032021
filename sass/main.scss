@@ -1,8 +1,103 @@
-/*IMPORT*/
-@import "./utils/variablemixinkf";
-@import "./base/police";
+@font-face{
+    font-family: 'robotoregular';
+    src: url('../../fonts/robotoregular.woff2') format('woff2'),
+         url('../../fonts/robotoregular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'robotobold';
+    src: url('../../fonts/robotobold.woff2') format('woff2'),
+         url('../../fonts/robotobold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'robotothin';
+    src: url('../../fonts/robotothin.woff2') format('woff2'),
+         url('../../fonts/robotothin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'shrikhand';
+    src: url('../../fonts/shrikhandregular.woff2') format('woff2'),
+         url('../../fonts/shrikhandregular.woff')  format('woff');    
+    font-weight: normal;
+    font-style: normal;
+}
+$fondsecondarydeux:#f7f1f1;
+$colorprimarydeux:#8b51d3;
+$colorprimary:#9356DC;
+$colorsecondary:#FF79DA;
+$colortertiary:#99E2D0;
+$fondsecondary:#f6f6f6;
+$colorshaow:rgb(179, 178, 178);
+$coeurfull:#D86CDB;
 
-/*DEBUT DU PROJET*/
+@mixin btn_primary {
+    padding:10px 15px 10px 15px;
+        color:white;
+        border-radius: 25px;
+        text-align: center;
+        box-shadow: 3px 3px 10px grey;
+        margin-top: 5px;
+        background-image: linear-gradient(175deg,$colorsecondary, $colorprimary);
+        &:hover{
+            filter:brightness(110%);
+            box-shadow:5px 5px 10px rgb(107, 106, 106);
+        }   
+}
+@mixin titreaccueil{
+    font-family: 'robotobold';
+    font-size:1.3rem;
+    padding-top: 15px;
+}
+
+  
+  @keyframes drop {
+      10% {
+          opacity: 0.5;
+      }
+      20% {
+          opacity: 1;
+          top: 3.78em;
+          transform: rotateX(-360deg);
+      }
+      80% {
+          opacity: 1;
+          top: 3.78em;
+          transform: rotateX(-360deg);
+      }
+      90% {
+          opacity: 0.5;
+      }
+      100% {
+          opacity: 0;
+          top: 6.94em
+      }
+  }
+  @keyframes opaque{
+      0%{
+          opacity:0;
+      }
+      
+      100%{
+          opacity:0;
+      }
+  }
+  @keyframes fondu{
+      0%{
+          opacity:0;
+      }
+      50%{
+          opacity:0.5;
+      }
+      100%{
+          opacity:1;
+      }
+  }
+
 body{
     margin:0px;
     padding:0px;
@@ -21,7 +116,6 @@ a:link{
     text-decoration: none;
     color: white;
 }
-/*LOAD SPINER H1*/
 h1 {
     font-weight: 100;
     color:black;
@@ -48,7 +142,49 @@ h1 span {
     font-size: 3em;
   }
   
-/*LOGO*/
+  .let1 {
+    animation: drop 2.2s ease-in-out;
+    animation-delay: 1.2s;
+  }
+  
+  .let2 {
+    animation: drop 2.2s ease-in-out;
+    animation-delay: 1.3s;
+  }
+  
+  .let3 {
+    animation: drop 2.2s ease-in-out;
+    animation-delay: 1.4s;
+  }
+  
+  .let4 {
+    animation: drop 2.2s ease-in-out;
+    animation-delay: 1.5s;
+  
+  }
+  
+  .let5 {
+    animation: drop 2.2s ease-in-out;
+    animation-delay: 1.6s;
+  }
+  
+  .let6 {
+    animation: drop 2.2s ease-in-out;
+    animation-delay: 1.7s;
+  }
+  
+  .let7 {
+    animation: drop 2.2s ease-in-out;
+    animation-delay: 1.8s;
+  }
+  .let8 {
+    animation: drop 2.2s ease-in-out;
+    animation-delay: 1.9s;
+  }
+  
+.corps{
+    animation:opaque 4.5s, fondu 2S 4.3s;
+} 
 .blocklogo{
     width:100%;
     display:flex;
@@ -61,7 +197,7 @@ h1 span {
         width: 50%;
         height: 75%;   
     }
-/*partie block et rectangle formulaire LOCALISER*/
+/*partie block et rectangle formulaire*/
 }
 .blockformulaire{
     background-color:#eaeaea;
@@ -90,7 +226,8 @@ h1 span {
     margin-right:2px;
     display:inline;
 }
-/*partie banniere btn fonctionnement*/
+/*partie banniere*/
+
 .conteneurbanniere{
     display: flex;
     flex-direction: column;

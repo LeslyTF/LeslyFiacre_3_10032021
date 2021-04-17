@@ -1,9 +1,91 @@
+@font-face{
+    font-family: 'robotoregular';
+    src: url('../../fonts/robotoregular.woff2') format('woff2'),
+         url('../../fonts/robotoregular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'robotobold';
+    src: url('../../fonts/robotobold.woff2') format('woff2'),
+         url('../../fonts/robotobold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'robotothin';
+    src: url('../../fonts/robotothin.woff2') format('woff2'),
+         url('../../fonts/robotothin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'shrikhand';
+    src: url('../../fonts/shrikhandregular.woff2') format('woff2'),
+         url('../../fonts/shrikhandregular.woff')  format('woff');    
+    font-weight: normal;
+    font-style: normal;
+}
+/* VARIABLES */
+$colorprimary:#9356DC;
+$colorsecondary:#FF79DA;
+$colortertiary:#99E2D0;
+$fondsecondary:#f6f6f6;
+$colorshaow:rgb(179, 178, 178);
+$coeurfull:#D86CDB;
 
-/*IMPORT*/
-@import "./utils/variablemixinkf";
-@import "./base/police";
-
+/* MIXINS */
+@mixin btn_primary {
+    padding:10px 15px 10px 15px;
+        color:white;
+        border-radius: 25px;
+        text-align: center;
+        box-shadow: 3px 3px 10px grey;
+        margin-top: 5px;
+        background-image: linear-gradient(175deg,$colorsecondary, $colorprimary);   
+}
+@mixin btn_commander {
+    padding:10px 15px 10px 15px;
+        color:white;
+        border-radius: 25px;
+        text-align: center;
+        box-shadow: 3px 3px 10px grey;
+        margin: 30px 0px 60px 0px;
+        background-image: linear-gradient(175deg,$colorsecondary, $colorprimary); 
+        width:35%;  
+}
+@mixin titreaccueil{
+    font-family: 'robotobold';
+    font-size:1.3rem;
+    padding-top: 15px;
+}
+@mixin titremenustyle{
+    font-family:'robotothin';
+    border-bottom:3px solid $colortertiary;
+    width:40px;
+    margin-left: 3%;
+}
+@keyframes anim-plat{
+    0%{
+        opacity:0;
+        transform:translateY(-100%);
+    }
+    50%{
+        opacity: 0.5;
+    }
+    80%{
+        opacity: 0.8;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0)
+    }
+}
 /* DEBUT DU PROJET */
+
 body{
     font-family:'robotoregular';
     padding:0px;
@@ -93,11 +175,10 @@ a{
         transform:scale(1)
     }
 }
-/*design titre*/
+
 .menutitre{
     @include titremenustyle;
 }
-/*btn */
 .conteneurbtn{
     display: flex;
     justify-content: space-around;
@@ -163,7 +244,7 @@ a{
             }
         }
 }
-/*animation plat*/        
+        
 .btnmenu{
     &:hover .btnmenu__anim{
         transform:translateX(0);
@@ -179,8 +260,18 @@ a{
         transform:rotate(0deg);
     }
 }
-
-/*btn commander*/
+.btnmenu--1{
+    animation:anim-plat 800ms 200ms both cubic-bezier(.08,.96,.14,.96);
+}
+.btnmenu--2{
+    animation: anim-plat 800ms 400ms both cubic-bezier(.08,.96,.14,.96);
+}
+.btnmenu--3{
+    animation: anim-plat 800ms 600ms both cubic-bezier(.08,.96,.14,.96);
+}
+.btnmenu--4{
+    animation: anim-plat 800ms 800ms both cubic-bezier(.08,.96,.14,.96);    
+}
 
 .blockcommander{
     display: flex;
