@@ -1,0 +1,126 @@
+/*VARIABLES*/
+$fondsecondarydeux:#f7f1f1;
+$colorprimarydeux:#8b51d3;
+$colorprimary:#9356DC;
+$colorsecondary:#FF79DA;
+$colortertiary:#99E2D0;
+$fondsecondary:#f6f6f6;
+$colorshaow:rgb(179, 178, 178);
+$coeurfull:#D86CDB;
+
+/*MIXIN*/
+@mixin btn_primary {
+    padding:10px 15px 10px 15px;
+        color:white;
+        border-radius: 25px;
+        text-align: center;
+        box-shadow: 3px 3px 10px grey;
+        margin-top: 5px;
+        background-image: linear-gradient(175deg,$colorsecondary, $colorprimary);
+        &:hover{
+            filter:brightness(110%);
+            box-shadow:5px 5px 10px rgb(107, 106, 106);
+        }   
+}
+@mixin titreaccueil{
+    font-family: 'robotobold';
+    font-size:1.3rem;
+    padding-top: 15px;
+}
+@mixin btn_primary {
+    padding:10px 15px 10px 15px;
+        color:white;
+        border-radius: 25px;
+        text-align: center;
+        box-shadow: 3px 3px 10px grey;
+        margin-top: 5px;
+        background-image: linear-gradient(175deg,$colorsecondary, $colorprimary);
+        &:hover{
+            filter:brightness(110%);
+            box-shadow:5px 5px 10px rgb(107, 106, 106);
+        }    
+}
+@mixin btn_commander {
+    padding:10px 15px 10px 15px;
+        color:white;
+        border-radius: 25px;
+        text-align: center;
+        box-shadow: 3px 3px 10px grey;
+        margin: 30px 0px 60px 0px;
+        background-image: linear-gradient(175deg,$colorsecondary, $colorprimary); 
+        width:35%;  
+}
+@mixin titreaccueil{
+    font-family: 'robotobold';
+    font-size:1.3rem;
+    padding-top: 15px;
+}
+@mixin titremenustyle{
+    font-family:'robotothin';
+    border-bottom:3px solid $colortertiary;
+    width:40px;
+    margin-left: 3%;
+}
+/*KEYFRAMES*/
+@keyframes drop {
+    10% {
+        opacity: 0.5;
+    }
+    20% {
+        opacity: 1;
+        top: 3.78em;
+        transform: rotateX(-360deg);
+    }
+    80% {
+        opacity: 1;
+        top: 3.78em;
+        transform: rotateX(-360deg);
+    }
+    90% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+        top: 6.94em
+    }
+}
+@keyframes opaque{
+    0%{
+        opacity:0;
+    }
+    
+    100%{
+        opacity:0;
+    }
+}
+@keyframes fondu{
+    0%{
+        opacity:0;
+    }
+    50%{
+        opacity:0.5;
+    }
+    100%{
+        opacity:1;
+    }
+}
+@keyframes anim-plat{
+    0%{
+        opacity:0;
+        transform:translateY(-100%);
+    }
+    50%{
+        opacity: 0.5;
+    }
+    80%{
+        opacity: 0.8;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0)
+    }
+}
+/*ANIMATIONS*/
