@@ -2,8 +2,8 @@
 /*IMPORT*/
 @import "./utils/variablemixinkf";
 @import "./base/police";
-/* DEBUT DU PROJET */
 
+/* DEBUT DU PROJET */
 body{
     font-family:'robotoregular';
     padding:0px;
@@ -93,10 +93,11 @@ a{
         transform:scale(1)
     }
 }
-
+/*design titre*/
 .menutitre{
     @include titremenustyle;
 }
+/*btn */
 .conteneurbtn{
     display: flex;
     justify-content: space-around;
@@ -162,7 +163,7 @@ a{
             }
         }
 }
-        
+/*animation plat*/        
 .btnmenu{
     &:hover .btnmenu__anim{
         transform:translateX(0);
@@ -179,6 +180,7 @@ a{
     }
 }
 
+/*btn commander*/
 
 .blockcommander{
     display: flex;

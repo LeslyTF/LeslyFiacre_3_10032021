@@ -21,6 +21,7 @@ a:link{
     text-decoration: none;
     color: white;
 }
+/*LOAD SPINER H1*/
 h1 {
     font-weight: 100;
     color:black;
@@ -47,7 +48,7 @@ h1 span {
     font-size: 3em;
   }
   
-  
+/*LOGO*/
 .blocklogo{
     width:100%;
     display:flex;
@@ -60,7 +61,7 @@ h1 span {
         width: 50%;
         height: 75%;   
     }
-/*partie block et rectangle formulaire*/
+/*partie block et rectangle formulaire LOCALISER*/
 }
 .blockformulaire{
     background-color:#eaeaea;
@@ -89,8 +90,7 @@ h1 span {
     margin-right:2px;
     display:inline;
 }
-/*partie banniere*/
-
+/*partie banniere btn fonctionnement*/
 .conteneurbanniere{
     display: flex;
     flex-direction: column;
